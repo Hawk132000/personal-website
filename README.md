@@ -1,8 +1,8 @@
 # 🛡️ Himanshu Mahajan - Cybersecurity Portfolio
 
-[![Website Status](https://img.shields.io/badge/status-live-success)](https://himanshum.com)
-[![Built with](https://img.shields.io/badge/built%20with-love%20%26%20coffee-orange)](https://himanshum.com)
-[![Tech Stack](https://img.shields.io/badge/tech-HTML%20%7C%20CSS%20%7C%20JS-blue)](https://himanshum.com)
+[![Website Status](https://img.shields.io/badge/status-live-success)](https://himanshumahajan.com)
+[![Built with](https://img.shields.io/badge/built%20with-love%20%26%20coffee-orange)](https://himanshumahajan.com)
+[![Tech Stack](https://img.shields.io/badge/tech-HTML%20%7C%20CSS%20%7C%20JS-blue)](https://himanshumahajan.com)
 
 > *"Security is not a product, but a process." - Bruce Schneier*
 
@@ -60,7 +60,7 @@ Text: #333333      /* Dark Gray */
 
 ## 📱 Preview
 
-Visit the live site: [himanshum.com](https://himanshum.com)
+Visit the live site: [himanshumahajan.com](https://himanshumahajan.com)
 
 ## 🔒 Security Focus
 
