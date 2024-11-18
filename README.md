@@ -6,6 +6,14 @@
 
 > *"Security is not a product, but a process." - Bruce Schneier*
 
+## 🔒 Important Notice
+
+This portfolio is a personal showcase of my work and professional journey. The design, code, and content are proprietary and:
+- ⛔ Not for copying or reproduction
+- ⛔ Not for personal or commercial use
+- ⛔ Not for modification or distribution
+- ✅ Available for viewing and inspiration only
+
 ## 🌟 Overview
 
 Welcome to my cybersecurity portfolio! This website showcases my journey, expertise, and contributions in the field of information security. With a focus on elegant design and smooth user experience, this portfolio reflects my professional approach to cybersecurity.
@@ -50,12 +58,6 @@ Text: #333333      /* Dark Gray */
 - 🎓 **Education**: Academic background
 - 📬 **Contact**: Professional connections
 
-## 🚀 Quick Start
-
-1. Clone the repository
-2. Open `index.html` in your browser
-3. Explore the interactive portfolio!
-
 ## 📱 Preview
 
 Visit the live site: [himanshum.com](https://himanshum.com)
@@ -74,11 +76,13 @@ As a cybersecurity professional, this portfolio emphasizes:
 - [Blog - CyberCrip](https://cybercrip.com)
 - [Blog - VulnerX](https://vulnerx.com)
 
-## 📄 License
+## ⚖️ License
 
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+This project is protected under a custom license. All rights reserved.
+See the [LICENSE](LICENSE) file for details.
 
 ---
 
 <p align="center">Designed & Built by Himanshu Mahajan</p>
 <p align="center">🛡️ Securing the Digital World 🌐</p>
+<p align="center">© 2024 Himanshu Mahajan - All Rights Reserved</p>
