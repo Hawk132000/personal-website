@@ -62,13 +62,6 @@ Text: #333333      /* Dark Gray */
 
 Visit the live site: [himanshumahajan.com](https://himanshumahajan.com)
 
-## 🔒 Security Focus
-
-As a cybersecurity professional, this portfolio emphasizes:
-- Secure coding practices
-- Performance optimization
-- Clean, maintainable code
-- Modern security features
 
 ## 🤝 Connect
 
