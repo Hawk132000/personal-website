@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Security Playground | Himanshu Mahajan</title>
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="favicon.svg">
+    <link rel="icon" type="image/png" href="favicon.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+    
+    <!-- Styles -->
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="playground.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&family=Source+Code+Pro:wght@400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-content">
+            <div class="logo">Himanshu Mahajan</div>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="playground.html" class="active">Playground</a></li>
+            </ul>
+            <div class="menu-btn">
+                <i class="fas fa-bars"></i>
+            </div>
+        </div>
+    </nav>
+
+    <main>
+        <!-- Terminal Section -->
+        <section class="terminal-section">
+            <div class="container">
+                <div class="terminal">
+                    <div class="terminal-header">
+                        <div class="terminal-dots">
+                            <span class="dot"></span>
+                            <span class="dot"></span>
+                            <span class="dot"></span>
+                        </div>
+                        <div class="terminal-title">visitor@himanshu:~$</div>
+                    </div>
+                    <div class="terminal-body">
+                        <div class="command-line">
+                            <span class="prompt">$</span>
+                            <input type="text" class="command-input" autofocus spellcheck="false">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CTF Section -->
+        <section class="ctf-section">
+            <canvas id="matrix" class="matrix-background"></canvas>
+            <div class="container">
+                <h2>Capture The Flag Challenges</h2>
+                <div class="score-container">
+                    <div class="score">Score: <span>0</span>/300</div>
+                    <div class="progress-bar">
+                        <div class="progress"></div>
+                    </div>
+                </div>
+                
+                <div class="challenges">
+                    <!-- Challenge 1: Web Inspection -->
+                    <div class="challenge" data-points="50">
+                        <h3>CTF part 1</h3>
+                        <p>A secret flag has been hidden in this page's source code. Your task is to find it using web inspection tools.</p>
+                        <!-- Congratulations! You found it: flag{source_code_secrets} -->
+                        <div class="hint-box">
+                            <button class="hint-btn">Need a hint? (-10 pts)</button>
+                            <div class="hint">Try using your browser's View Source feature (Ctrl+U/Cmd+U) to examine the HTML code.</div>
+                        </div>
+                        <div class="flag-container">
+                            <input type="text" class="flag-input" placeholder="Enter flag here..." data-flag="flag{source_code_secrets}">
+                            <button class="submit-flag">Submit Flag</button>
+                        </div>
+                    </div>
+
+                    <!-- Challenge 2: Base64 -->
+                    <div class="challenge" data-points="100">
+                        <h3>CTF part 2</h3>
+                        <p>This message has been encoded. Can you decode it?</p>
+                        <code>ZmxhZ3tiYXNlNjRfaXNfZnVufQ==</code>
+                        <div class="hint-box">
+                            <button class="hint-btn">Need a hint? (-10 pts)</button>
+                            <div class="hint">Base64 uses a set of 64 characters (A-Z, a-z, 0-9, +, /) to encode binary data. Each Base64 digit represents 6 bits, and padding with '=' ensures the output length is a multiple of 4.</div>
+                        </div>
+                        <div class="flag-container">
+                            <input type="text" class="flag-input" placeholder="Enter flag here..." data-flag="flag{base64_is_fun}">
+                            <button class="submit-flag">Submit Flag</button>
+                        </div>
+                    </div>
+
+                    <!-- Challenge 3: Hex -->
+                    <div class="challenge" data-points="150">
+                        <h3>CTF part 3</h3>
+                        <p>Here's a message encoded, Can you convert it to readable text?</p>
+                        <code>
+                            48 65 6c 6c 6f 20 48 61 63 6b 65 72 21 20 66 6c 61 67 7b 68 65 78 5f 66 75 6e 7d
+                        </code>
+                        <div class="hint-box">
+                            <button class="hint-btn">Need a hint? (-10 pts)</button>
+                            <div class="hint">In hexadecimal, each digit represents 4 bits (0-15). Two hex digits make one byte (8 bits), which maps to an ASCII character. The ASCII table defines character codes: uppercase letters start at hex 41 (A), lowercase at 61 (a).</div>
+                        </div>
+                        <div class="flag-container">
+                            <input type="text" class="flag-input" placeholder="Enter flag here..." data-flag="flag{hex_fun}">
+                            <button class="submit-flag">Submit Flag</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <p>Designed & Built by Himanshu Mahajan</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <script src="playground.js"></script>
+</body>
+</html>
