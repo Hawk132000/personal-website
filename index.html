@@ -70,14 +70,27 @@
     <!-- Navigation -->
     <nav class="navbar" role="navigation" aria-label="Main navigation">
         <div class="nav-content">
-            <div class="logo" role="banner">Himanshu Mahajan</div>
+            <div class="logo" role="banner">
+                <a href="#home" class="logo-link">Himanshu Mahajan</a>
+            </div>
             <ul class="nav-links" role="menubar">
                 <li role="none"><a href="#home" role="menuitem">Home</a></li>
                 <li role="none"><a href="#about" role="menuitem">About</a></li>
-                <li role="none"><a href="#skills" role="menuitem">Skills</a></li>
-                <li role="none"><a href="#experience" role="menuitem">Experience</a></li>
-                <li role="none"><a href="#initiatives" role="menuitem">Strategic Initiatives</a></li>
-                <li role="none"><a href="#certifications" role="menuitem">Certifications</a></li>
+                <li class="dropdown" role="none">
+                    <a href="#" role="menuitem" aria-haspopup="true" aria-expanded="false">Expertise</a>
+                    <ul class="dropdown-menu" role="menu">
+                        <li role="none"><a href="#skills" role="menuitem">Skills</a></li>
+                        <li role="none"><a href="#experience" role="menuitem">Experience</a></li>
+                        <li role="none"><a href="#initiatives" role="menuitem">Strategic Initiatives</a></li>
+                    </ul>
+                </li>
+                <li class="dropdown" role="none">
+                    <a href="#" role="menuitem" aria-haspopup="true" aria-expanded="false">Publications</a>
+                    <ul class="dropdown-menu" role="menu">
+                        <li role="none"><a href="#publications" role="menuitem">Technical Blogs</a></li>
+                        <li role="none"><a href="#certifications" role="menuitem">Certifications</a></li>
+                    </ul>
+                </li>
                 <li role="none"><a href="#contact" role="menuitem">Contact</a></li>
                 <li role="none"><a href="playground.html" class="nav-highlight" role="menuitem"><i class="fas fa-terminal" aria-hidden="true"></i> Playground</a></li>
             </ul>
@@ -338,6 +351,50 @@
             </div>
         </section>
 
+        <!-- Professional Publications Section -->
+        <section id="publications" class="publications">
+            <h2>Professional Publications</h2>
+            <div class="publications-container">
+                <div class="publication-card">
+                    <div class="publication-header">
+                        <img src="vulnerx-logo.png" alt="VulnerX Logo" class="publication-logo">
+                        <h3>VulnerX</h3>
+                    </div>
+                    <p class="publication-description">
+                        Technical publication focused on advanced vulnerability research, exploit development, and security architecture. In-depth analysis of emerging cybersecurity threats and defensive strategies.
+                    </p>
+                    <div class="publication-topics">
+                        <span>Vulnerability Research</span>
+                        <span>Exploit Development</span>
+                        <span>Security Architecture</span>
+                    </div>
+                    <a href="https://vulnerx.com" class="publication-link" target="_blank" rel="noopener noreferrer">
+                        <i class="fas fa-external-link-alt"></i>
+                        Visit VulnerX
+                    </a>
+                </div>
+
+                <div class="publication-card">
+                    <div class="publication-header">
+                        <img src="cybercrip-logo.png" alt="CyberCrip Logo" class="publication-logo">
+                        <h3>CyberCrip</h3>
+                    </div>
+                    <p class="publication-description">
+                        Professional blog covering enterprise security solutions, IAM frameworks, and cloud security implementations. Practical insights into cybersecurity best practices and industry standards.
+                    </p>
+                    <div class="publication-topics">
+                        <span>Enterprise Security</span>
+                        <span>IAM Solutions</span>
+                        <span>Cloud Security</span>
+                    </div>
+                    <a href="https://cybercrip.com" class="publication-link" target="_blank" rel="noopener noreferrer">
+                        <i class="fas fa-external-link-alt"></i>
+                        Visit CyberCrip
+                    </a>
+                </div>
+            </div>
+        </section>
+
         <!-- Education Section -->
         <section id="education" class="education">
             <h2>Education</h2>
@@ -447,6 +504,83 @@
         </div>
     </footer>
 
+    <script>
+        // Mobile menu toggle
+        const menuBtn = document.querySelector('.menu-btn');
+        const navLinks = document.querySelector('.nav-links');
+        const dropdowns = document.querySelectorAll('.dropdown');
+        const mainContent = document.querySelector('main');
+
+        menuBtn.addEventListener('click', () => {
+            navLinks.classList.toggle('active');
+            // Add padding to main content when menu is open
+            if (navLinks.classList.contains('active')) {
+                document.body.style.overflow = 'hidden';
+                mainContent.style.paddingTop = '320px';
+            } else {
+                document.body.style.overflow = '';
+                mainContent.style.paddingTop = '80px';
+                // Close all dropdowns when closing menu
+                dropdowns.forEach(dropdown => dropdown.classList.remove('active'));
+            }
+        });
+
+        // Handle dropdown toggles on mobile
+        dropdowns.forEach(dropdown => {
+            const dropdownLink = dropdown.querySelector('a');
+            dropdownLink.addEventListener('click', (e) => {
+                if (window.innerWidth <= 768) {
+                    e.preventDefault();
+                    dropdown.classList.toggle('active');
+                    
+                    // Adjust main content padding based on open dropdowns
+                    const activeDropdowns = document.querySelectorAll('.dropdown.active').length;
+                    const extraPadding = activeDropdowns * 120;
+                    mainContent.style.paddingTop = `${320 + extraPadding}px`;
+                    
+                    // Close other dropdowns
+                    dropdowns.forEach(other => {
+                        if (other !== dropdown) {
+                            other.classList.remove('active');
+                        }
+                    });
+                }
+            });
+        });
+
+        // Close menu when clicking outside
+        document.addEventListener('click', (e) => {
+            if (!navLinks.contains(e.target) && !menuBtn.contains(e.target)) {
+                navLinks.classList.remove('active');
+                dropdowns.forEach(dropdown => dropdown.classList.remove('active'));
+                document.body.style.overflow = '';
+                mainContent.style.paddingTop = window.innerWidth <= 768 ? '80px' : '60px';
+            }
+        });
+
+        // Reset styles on window resize
+        window.addEventListener('resize', () => {
+            if (window.innerWidth > 768) {
+                navLinks.classList.remove('active');
+                dropdowns.forEach(dropdown => dropdown.classList.remove('active'));
+                document.body.style.overflow = '';
+                mainContent.style.paddingTop = '60px';
+            } else {
+                mainContent.style.paddingTop = navLinks.classList.contains('active') ? '320px' : '80px';
+            }
+        });
+
+        // Close mobile menu when clicking a link
+        document.querySelectorAll('.nav-links a').forEach(link => {
+            link.addEventListener('click', () => {
+                if (window.innerWidth <= 768 && !link.parentElement.classList.contains('dropdown')) {
+                    navLinks.classList.remove('active');
+                    document.body.style.overflow = '';
+                    mainContent.style.paddingTop = '80px';
+                }
+            });
+        });
+    </script>
     <script src="script.js"></script>
 </body>
 </html>
