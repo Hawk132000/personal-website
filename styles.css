@@ -2825,3 +2825,56 @@ footer {
         font-size: 1rem;
     }
 }
+
+/* Add styling for the company badge */
+.company-badge {
+    background: rgba(52, 152, 219, 0.1);
+    color: #2980b9;
+    padding: 4px 12px;
+    border-radius: 12px;
+    font-size: 0.7rem;
+    font-weight: 600;
+    margin-top: 6px;
+    display: inline-block;
+    border: 1px solid rgba(52, 152, 219, 0.2);
+    transition: all 0.3s ease;
+    letter-spacing: 0.3px;
+    text-transform: uppercase;
+}
+
+.company-badge:hover {
+    background: rgba(52, 152, 219, 0.15);
+    border-color: rgba(52, 152, 219, 0.3);
+    transform: translateY(-1px);
+}
+
+/* Fortune 50 emphasis styling */
+.company-badge.fortune-50 {
+    background: #2980b9;
+    color: white;
+    border: 1px solid #2980b9;
+}
+
+.company-badge.fortune-50:hover {
+    background: #3498db;
+    border-color: #3498db;
+}
+
+/* Media company styling - using same blue palette */
+.company-badge.media-giant {
+    background: rgba(52, 152, 219, 0.08);
+    color: #2980b9;
+    border: 1px solid rgba(52, 152, 219, 0.15);
+}
+
+.company-badge.media-giant:hover {
+    background: rgba(52, 152, 219, 0.12);
+    border-color: rgba(52, 152, 219, 0.25);
+    transform: translateY(-1px);
+}
+
+.company-badge.fortune-500 {
+    background: rgba(52, 152, 219, 0.06);
+    color: #2980b9;
+    border: 1px solid rgba(52, 152, 219, 0.12);
+}
