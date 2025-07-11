@@ -891,6 +891,14 @@ section h2 {
     margin-bottom: 1rem;
 }
 
+.cert-logo {
+    width: 64px;
+    height: 64px;
+    object-fit: contain;
+    display: block;
+    margin: 0 auto 1rem auto;
+}
+
 /* Contact Section */
 .contact {
     background-color: var(--light-bg);
@@ -1626,24 +1634,6 @@ footer {
     font-size: 2.5rem;
     color: var(--secondary-color);
     margin-bottom: 1rem;
-}
-
-.cert-item h3 {
-    color: var(--primary-color);
-    margin-bottom: 0.5rem;
-    font-size: 1.2rem;
-}
-
-.cert-item .status {
-    color: var(--accent-color);
-    font-weight: 500;
-}
-
-.cert-item .issuer,
-.cert-item .specialization {
-    color: var(--text-color);
-    font-size: 0.9rem;
-    margin-top: 0.5rem;
 }
 
 /* Strategic Initiatives Section */
